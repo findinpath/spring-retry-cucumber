@@ -1,0 +1,7 @@
+github:
+  api:
+    connectTimeout: 50000
+    readTimeout: 50000
+    retry:
+      maxAttempts: 3
+      initialBackoffTime: 50

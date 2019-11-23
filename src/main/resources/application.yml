@@ -1,0 +1,8 @@
+github:
+  api:
+    url: https://api.github.com/
+    connectTimeout: 5000
+    readTimeout: 5000
+    retry:
+      maxAttempts: 3
+      initialBackoffTime: 50
