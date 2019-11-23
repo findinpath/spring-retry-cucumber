@@ -1,7 +1,7 @@
-package com.findinpath
+package com.findinpath;
 
-import com.findinpath.api.github.Github
-import com.findinpath.api.github.GithubProperties
+import com.findinpath.api.github.Github;
+import com.findinpath.api.github.GithubProperties;
 
 public class DemoApplication {
     public static void main(String[] args) {

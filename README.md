@@ -45,8 +45,18 @@ to be able to support custom types:
 See in the images referenced above the highlighted tokens:
 
 - `GET` (corresponds to `RequestMethod.GET`)
-- `INTERNAL_SERVER_ERROR` (correspond to `HttpStatus.INTERNAL_SERVER_ERROR`)
+- `INTERNAL_SERVER_ERROR` (corresponds to `HttpStatus.INTERNAL_SERVER_ERROR`)
 
 to understand that the registration of custom types in Gherkin
 has a clear outcome in better readability for the executable test
 specifications.
+
+
+
+Use the following command:
+
+```bash
+mvn clean install
+```
+
+for running the tests on the project.

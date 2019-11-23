@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
     plugin = {"html:target/cucumber-html-report",
         "json:target/cucumber-json-report.json",
         "pretty",
-        "junit:cucumber-junit-report.log"}
+        "junit:target/cucumber-junit-report.log"}
 )
 public class CucumberTest {
 
