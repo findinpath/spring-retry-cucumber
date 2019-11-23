@@ -1,5 +1,8 @@
 package com.findinpath.api.github;
 
+/**
+ * Wrapper for the properties used to configure the Github API client.
+ */
 public class GithubProperties {
 
   private String url;

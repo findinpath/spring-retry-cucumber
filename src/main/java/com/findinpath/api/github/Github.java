@@ -9,6 +9,12 @@ import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.tcp.TcpClient;
 
+/**
+ * Stripped down version of the Github API client that uses the spring-reactor-webflux `WebClient`
+ * for performing the HTTP requests.
+ * <p>
+ * NOTE that the `WebClient` calls used throughout this API client are blocking.
+ */
 public class Github {
 
   private WebClient webClient;

@@ -8,6 +8,9 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+/**
+ * Stripped down wrapper for the `/users/` Github API endpoint.
+ */
 public class UsersEndpoint {
 
   private WebClient webClient;

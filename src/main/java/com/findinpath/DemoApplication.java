@@ -3,6 +3,9 @@ package com.findinpath;
 import com.findinpath.api.github.Github;
 import com.findinpath.api.github.GithubProperties;
 
+/**
+ * Simple demo of the Github API client library without spring-retry functionality.
+ */
 public class DemoApplication {
     public static void main(String[] args) {
         var config = new GithubProperties("https://api.github.com/");

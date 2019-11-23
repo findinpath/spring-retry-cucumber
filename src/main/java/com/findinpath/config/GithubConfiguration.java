@@ -6,6 +6,11 @@ import com.findinpath.api.github.UsersEndpoint;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * Configuration class used for instantiating the beans for the Github API client.
+ *
+ * @see GithubPropertiesConfiguration
+ */
 @Configuration
 class GithubConfiguration {
 

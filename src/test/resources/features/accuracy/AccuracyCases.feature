@@ -1,4 +1,8 @@
-Feature: General failure tests for the Github API client
+Feature: General accuracy tests for the Github API client
+
+  The purpose of these test scenarios is to show how the retrieval
+  of the user details from Github API should work in a happy flow,
+  when no unexpected errors occur.
 
   Scenario: Happy flow for retrieving user details
     Given I have configured the responses for the Github API

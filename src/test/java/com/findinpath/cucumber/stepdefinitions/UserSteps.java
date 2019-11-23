@@ -6,6 +6,7 @@ import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 import com.findinpath.api.github.UsersEndpoint;
+import io.cucumber.java.After;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,11 +18,26 @@ public class UserSteps {
   private UsersEndpoint usersEndpoint;
   private UserSharedScenarioData userSharedScenarioData;
 
+  /**
+   * Constructor for the Cucumber step related to Github user API.
+   * <p>
+   * NOTE that the constructor is annotated with spring's `@Autowired` annotation for instructing
+   * the dependency container which other spring beans need to be injected in this class.
+   *
+   * @param usersEndpoint          the endpoint for getting user details from the Github API
+   * @param userSharedScenarioData the data holder shared between the scenario steps
+   */
   @Autowired
   public UserSteps(UsersEndpoint usersEndpoint,
       UserSharedScenarioData userSharedScenarioData) {
     this.usersEndpoint = usersEndpoint;
     this.userSharedScenarioData = userSharedScenarioData;
+  }
+
+  @After
+  public void resetUserSharedScenarioData() {
+    userSharedScenarioData.setUser(null);
+    userSharedScenarioData.setWebClientResponseException(null);
   }
 
   @When("I retrieve the details for the user {word}")

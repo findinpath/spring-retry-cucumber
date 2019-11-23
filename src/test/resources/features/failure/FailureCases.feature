@@ -1,5 +1,13 @@
 Feature: General failure tests for the Github API client
 
+  The purpose of these test scenarios is to show how the retrieval
+  of the user details from Github API should work when failures
+  occur on the Github API side. In case of sporadic exceptions
+  occur on the Github API, due to the retry mechanism built-in
+  the Github client, this should go unnoticed in the client program
+  flow.
+
+
   Scenario: Single failure when fetching user details with retryable service
   still results in a successful Github API call
     Given I have configured the responses for the Github API
@@ -11,7 +19,7 @@ Feature: General failure tests for the Github API client
       | login      | blog                        |
       | findinpath | https://www.findinpath.com/ |
     And I have made 2 GET calls made towards Github API "/users/findinpath" resource
-    And I have a backoff delay between GET requests 1 and 2 made towards Github API "/users/findinpath" resource
+    But I have a backoff delay between GET requests 1 and 2 made towards Github API "/users/findinpath" resource
 
   Scenario: Multiple failures when fetching user details with retryable service
   will eventually results in a erroneous Github API call
